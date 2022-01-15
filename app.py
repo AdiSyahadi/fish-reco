@@ -103,7 +103,7 @@ def main():
 						rec_num_sub = row[1][4]
 
 						# st.write("Title",rec_title,)
-						stc.html(RESULT_TEMP.format(rec_title,rec_score,rec_url,rec_url,rec_num_sub),height=350)
+						stc.html(RESULT_TEMP.format(rec_title,rec_score,rec_url,rec_price,rec_num_sub),height=350)
 				except:
 					results= "Not Found"
 					st.warning(results)

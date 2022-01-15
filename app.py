@@ -44,7 +44,7 @@ def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
 	# Get the dataframe & title
 	result_df = df.iloc[selected_course_indices]
 	result_df['similarity_score'] = selected_course_scores
-	final_recommended_courses = result_df[['nama_ikan','similarity_score','url','price','num_subscribers']]
+	final_recommended_courses = result_df[['nama_ikan','url','price','num_subscribers']]
 	return final_recommended_courses.head(num_of_rec)
 
 
@@ -53,7 +53,6 @@ RESULT_TEMP = """
 box-shadow:0 0 15px 5px #ccc; background-color: #a8f0c6;
   border-left: 5px solid #6c6c6c;">
 <h4>{}</h4>
-<p style="color:blue;"><span style="color:black;">📈Score::</span>{}</p>
 <p style="color:blue;"><span style="color:black;">🔗</span><a href="{}",target="_blank">Link</a></p>
 <p style="color:blue;"><span style="color:black;">💲Price:</span>{}</p>
 <p style="color:blue;"><span style="color:black;">🧑‍🎓👨🏽‍🎓 Students:</span>{}</p>
@@ -97,13 +96,12 @@ def main():
 
 					for row in results.iterrows():
 						rec_title = row[1][0]
-						rec_score = row[1][1]
-						rec_url = row[1][2]
-						rec_price = row[1][3]
-						rec_num_sub = row[1][4]
+						rec_url = row[1][1]
+						rec_price = row[1][2]
+						rec_num_sub = row[1][3]
 
 						# st.write("Title",rec_title,)
-						stc.html(RESULT_TEMP.format(rec_title,rec_score,rec_url,rec_price,rec_num_sub),height=350)
+						stc.html(RESULT_TEMP.format(rec_title,rec_url,rec_price,rec_num_sub),height=350)
 				except:
 					results= "Not Found"
 					st.warning(results)

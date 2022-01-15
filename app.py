@@ -80,7 +80,7 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		st.title('This is a title')
+		st.caption('Copy salah satu nama ikan pada kolom data lalu kemudian Pasti ke dalam kolom Recommended')
 		col1, col2, col3 = st.columns(3)
 
 		with col1:

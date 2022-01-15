@@ -1,6 +1,7 @@
 # Core Pkg
 import streamlit as st 
 import streamlit.components.v1 as stc 
+from PIL import Image
 
 
 # Load EDA
@@ -69,7 +70,7 @@ def search_term_if_not_found(term,df):
 
 def main():
 
-	st.title("Course Recommendation App")
+	st.title("Fish Recommendation App")
 
 	menu = ["Home","Recommend","About"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -78,11 +79,12 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
+		image = Image.open('sunrise.jpg')
 		st.dataframe(df.head(96))
 
 
 	elif choice == "Recommend":
-		st.subheader("Recommend Courses")
+		st.subheader("Recommend Fish")
 		cosine_sim_mat = vectorize_text_to_cosine_mat(df['nama_ikan'])
 		search_term = st.text_input("Search")
 		num_of_rec = st.sidebar.number_input("Number",4,30,7)

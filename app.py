@@ -79,7 +79,7 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		image = Image.open('sunrise.jpg')
+		image = Image.open('images.jpeg')
 		st.dataframe(df.head(96))
 
 

@@ -31,22 +31,22 @@ def vectorize_text_to_cosine_mat(data):
 # Recommendation Sys
 @st.cache
 def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
-	# indices of the course
-	course_indices = pd.Series(df.index,index=df['nama_ikan']).drop_duplicates()
-	# Index of course
-	idx = course_indices[title]
+	# indices of the ikan
+	ikan_indices = pd.Series(df.index,index=df['nama_ikan']).drop_duplicates()
+	# Index of ikan
+	idx = ikan_indices[title]
 
 	# Look into the cosine matr for that index
 	sim_scores =list(enumerate(cosine_sim_mat[idx]))
 	sim_scores = sorted(sim_scores,key=lambda x: x[1],reverse=True)
-	selected_course_indices = [i[0] for i in sim_scores[1:]]
-	selected_course_scores = [i[0] for i in sim_scores[1:]]
+	selected_ikan_indices = [i[0] for i in sim_scores[1:]]
+	selected_ikan_scores = [i[0] for i in sim_scores[1:]]
 
 	# Get the dataframe & title
-	result_df = df.iloc[selected_course_indices]
-	result_df['similarity_score'] = selected_course_scores
-	final_recommended_courses = result_df[['nama_ikan','url','price','penjual','num_rate']]
-	return final_recommended_courses.head(num_of_rec)
+	result_df = df.iloc[selected_ikan_indices]
+	result_df['similarity_score'] = selected_ikan_scores
+	final_recommended_ikans = result_df[['nama_ikan','url','price','penjual','num_rate']]
+	return final_recommended_ikans.head(num_of_rec)
 
 
 RESULT_TEMP = """
@@ -62,7 +62,7 @@ RESULT_TEMP = """
 </div>
 """
 
-# Search For Course 
+# Search For Ikan 
 @st.cache
 def search_term_if_not_found(term,df):
 	result_df = df[df['nama_ikan'].str.contains(term)]

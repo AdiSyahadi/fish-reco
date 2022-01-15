@@ -29,7 +29,7 @@ def vectorize_text_to_cosine_mat(data):
 
 # Recommendation Sys
 @st.cache
-def get_recommendation(title,cosine_sim_mat,df,num_of_rec=10):
+def get_recommendation(title,cosine_sim_mat,df,num_of_rec=98):
 	# indices of the course
 	course_indices = pd.Series(df.index,index=df['course_title']).drop_duplicates()
 	# Index of course
@@ -79,7 +79,7 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		st.dataframe(df.head(10))
+		st.dataframe(df.head(98))
 
 
 	elif choice == "Recommend":

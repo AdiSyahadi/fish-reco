@@ -80,7 +80,7 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		from PIL import Image
-		image = Image.open('sunrise.jpg')
+		image = Image.open('images.jpeg')
 
 		st.image(image, caption='Sunrise by the mountains')
 		st.dataframe(df.head(96))

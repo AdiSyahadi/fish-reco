@@ -81,8 +81,8 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		from PIL import Image
-			image = Image.open('images.jpeg'[1])
-			st.image(image, caption='Sunrise by the mountains'[1])
+		image = Image.open('images.jpeg'[1])
+		st.image(image, caption='Sunrise by the mountains'[1])
 		
 		st.dataframe(df.head(96))
 

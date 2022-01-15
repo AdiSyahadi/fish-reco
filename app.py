@@ -54,7 +54,7 @@ RESULT_TEMP = """
  background-color: #d1d8e0;
   border-left: 5px solid #a5b1c2;">
 <h2>{}</h2>
-<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/office/16/000000/shop.png"/> : </span><a href="{}",target="_blank">Link Store</a></p>
+<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/office/16/000000/shop.png"/> : </span><a href="{}",target="">Link Store</a></p>
 <p style="color:blue;"><span style="color:black;">Harga : </span>{}</p>
 <p style="color:blue;"><span style="color:black;">Penjual : </span>{}</p>
 <p style="color:blue;"><span style="color:black;">Terjual : </span>{}</p>

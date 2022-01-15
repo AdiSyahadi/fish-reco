@@ -54,8 +54,8 @@ RESULT_TEMP = """
   border-left: 5px solid #45aaf2;">
 <h4>{}</h4>
 <p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/office/16/000000/shop.png"/> : </span><a href="{}",target="_blank">Link Store</a></p>
-<p style="color:blue;"><span style="color:black;">Price:</span>{}</p>
-<p style="color:blue;"><span style="color:black;">Pembeli:</span>{}</p>
+<p style="color:blue;"><span style="color:black;">Harga :</span>{}</p>
+<p style="color:blue;"><span style="color:black;">Terjual :</span>{}</p>
 
 </div>
 """

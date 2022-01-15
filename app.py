@@ -84,7 +84,7 @@ def main():
 		image = Image.open('images.jpeg')
 		st.image(image, caption='Pasar Ikan')
 		
-		st.dataframe(df.head(96))
+		st.dataframe(df.head())
 
 
 	elif choice == "Recommend":

@@ -83,14 +83,14 @@ def main():
 		from PIL import Image
 		col1, col2, col3 = st.columns(3)
 		with col1:
-		image = Image.open('sunrise.jpg'[1])
-		st.image(image, caption='Sunrise by the mountains'[1])
+			image = Image.open('sunrise.jpg'[1])
+			st.image(image, caption='Sunrise by the mountains'[1])
 		with col2:
-		image = Image.open('sunrise.jpg'[2])
-		st.image(image, caption='Sunrise by the mountains'[2])
+			image = Image.open('sunrise.jpg'[2])
+			st.image(image, caption='Sunrise by the mountains'[2])
 		with col3:
-		image = Image.open('sunrise.jpg'[3])
-		st.image(image, caption='Sunrise by the mountains'[3])
+			image = Image.open('sunrise.jpg'[3])
+			st.image(image, caption='Sunrise by the mountains'[3])
 		st.dataframe(df.head(96))
 
 

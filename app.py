@@ -50,7 +50,7 @@ def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
 
 RESULT_TEMP = """
 <div style="width:90%;height:100%;margin:1px;padding:5px;position:relative;border-radius:5px;
-box-shadow:0 0 15px 5px #ccc; background-color: #2d98da;
+ background-color: #2d98da;
   border-left: 5px solid #45aaf2;">
 <h4>{}</h4>
 <p style="color:blue;"><span style="color:black;">🔗</span><a href="{}",target="_blank">Link</a></p>

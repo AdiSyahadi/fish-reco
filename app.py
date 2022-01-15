@@ -88,7 +88,7 @@ def main():
 
 		with col2:
 		    st.header("A dog")
-		    st.image("https://static.streamlit.io/examples/dog.jpg")
+		    st.image("https://1.bp.blogspot.com/-leyZ6FE41_4/XBIcPe0NN2I/AAAAAAAAGPM/QZQHSskDDKkrCxRprHYmG5IxO-WOs-lIwCLcBGAs/s1600/1.jpg")
 
 		with col3:
 		    st.header("An owl")

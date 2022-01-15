@@ -45,7 +45,7 @@ def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
 	# Get the dataframe & title
 	result_df = df.iloc[selected_course_indices]
 	result_df['similarity_score'] = selected_course_scores
-	final_recommended_courses = result_df[['nama_ikan','url','price','penjual','num_subscribers']]
+	final_recommended_courses = result_df[['nama_ikan','url','price','penjual','num_rate']]
 	return final_recommended_courses.head(num_of_rec)
 
 
@@ -105,10 +105,10 @@ def main():
 						rec_url = row[1][1]
 						rec_price = row[1][2]
 						rec_penjual = row[1][3]
-						rec_num_sub = row[1][4]
+						rec_num_rate = row[1][4]
 
 						# st.write("Title",rec_title,)
-						stc.html(RESULT_TEMP.format(rec_title,rec_url,rec_price,rec_penjual,rec_num_sub),height=350)
+						stc.html(RESULT_TEMP.format(rec_title,rec_url,rec_price,rec_penjual,rec_num_rate),height=350)
 				except:
 					results= "Not Found"
 					st.warning(results)

@@ -53,9 +53,9 @@ RESULT_TEMP = """
  background-color: #2d98da;
   border-left: 5px solid #45aaf2;">
 <h4>{}</h4>
-<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/office/16/000000/shop.png"/></span><a href="{}",target="_blank">Link</a></p>
-<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/dusk/64/000000/price-tag-euro.png"/>Price:</span>{}</p>
-<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-sold-ecommerce-kiranshastry-lineal-color-kiranshastry.png"/>Pembeli:</span>{}</p>
+<p style="color:blue;"><span style="color:black;"><img src="https://img.icons8.com/office/16/000000/shop.png"/></span><a href="{}",target="_blank">Store:</span>{}</p>
+<p style="color:blue;"><span style="color:black;">Price:</span>{}</p>
+<p style="color:blue;"><span style="color:black;">Pembeli:</span>{}</p>
 
 </div>
 """

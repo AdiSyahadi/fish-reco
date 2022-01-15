@@ -92,7 +92,7 @@ def main():
 
 		with col3:
 		    st.header("An owl")
-		    st.image("https://static.streamlit.io/examples/owl.jpg")
+		    st.image("https://cdnt.orami.co.id/unsafe/cdn-cas.orami.co.id/parenting/images/teri.width-800.jpegquality-80.jpg")
 		
 		st.dataframe(df.head())
 

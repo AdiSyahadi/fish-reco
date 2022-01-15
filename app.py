@@ -31,7 +31,7 @@ def vectorize_text_to_cosine_mat(data):
 @st.cache
 def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
 	# indices of the course
-	course_indices = pd.Series(df.index,index=df['course_title']).drop_duplicates()
+	course_indices = pd.Series(df.index,index=df['nama_ikan']).drop_duplicates()
 	# Index of course
 	idx = course_indices[title]
 
@@ -44,7 +44,7 @@ def get_recommendation(title,cosine_sim_mat,df,num_of_rec=96):
 	# Get the dataframe & title
 	result_df = df.iloc[selected_course_indices]
 	result_df['similarity_score'] = selected_course_scores
-	final_recommended_courses = result_df[['course_title','similarity_score','url','price','num_subscribers']]
+	final_recommended_courses = result_df[['nama_ikan','similarity_score','url','price','num_subscribers']]
 	return final_recommended_courses.head(num_of_rec)
 
 
@@ -64,7 +64,7 @@ box-shadow:0 0 15px 5px #ccc; background-color: #a8f0c6;
 # Search For Course 
 @st.cache
 def search_term_if_not_found(term,df):
-	result_df = df[df['course_title'].str.contains(term)]
+	result_df = df[df['nama_ikan'].str.contains(term)]
 	return result_df
 
 
@@ -84,7 +84,7 @@ def main():
 
 	elif choice == "Recommend":
 		st.subheader("Recommend Courses")
-		cosine_sim_mat = vectorize_text_to_cosine_mat(df['course_title'])
+		cosine_sim_mat = vectorize_text_to_cosine_mat(df['nama_ikan'])
 		search_term = st.text_input("Search")
 		num_of_rec = st.sidebar.number_input("Number",4,30,7)
 		if st.button("Recommend"):

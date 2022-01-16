@@ -83,7 +83,7 @@ def main():
 		from PIL import Image
 		image = Image.open('images.jpeg')
 
-		st.image(image, caption='Sunrise by the mountains')
+		st.image(image, caption='Pilih dan Copy salah satu nama ikan, kemudian paste di kolom recommended')
 		st.dataframe(df['nama_ikan'])
 
 	elif choice == "Recommend":

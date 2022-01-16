@@ -81,19 +81,8 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		st.caption('Copy salah satu nama ikan pada kolom data lalu kemudian Pasti ke dalam kolom Recommended')
-		col1, col2, col3 = st.columns(3)
-
-		with col1:
-		    st.header("Ikan Patin")
-		    st.image("https://cdn.idntimes.com/content-images/community/2019/03/ikan-tuna-337d58f37de71665001b5431308e58ae_600x400.jpg")
-
-		with col2:
-		    st.header("Ikan Bandeng")
-		    st.image("https://1.bp.blogspot.com/-leyZ6FE41_4/XBIcPe0NN2I/AAAAAAAAGPM/QZQHSskDDKkrCxRprHYmG5IxO-WOs-lIwCLcBGAs/s1600/1.jpg")
-
-		with col3:
-		    st.header("Ikan Teri")
-		    st.image("https://cdnt.orami.co.id/unsafe/cdn-cas.orami.co.id/parenting/images/teri.width-800.jpegquality-80.jpg")
+		image = Image.open('https://cdn.idntimes.com/content-images/community/2019/03/ikan-tuna-337d58f37de71665001b5431308e58ae_600x400.jpg')
+		st.image(image, caption='Mini Project Fish Recommendation')
 		
 		st.dataframe(df.head())
 

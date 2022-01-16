@@ -124,7 +124,7 @@ def main():
 
 	else:
 		st.subheader("About")
-		st.text("Built with Streamlit & Pandas")
+		st.text("Mini Project AI For Start-up - Recommended Fish Product on E-commerce")
 
 
 if __name__ == '__main__':

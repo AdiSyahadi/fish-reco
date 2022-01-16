@@ -84,7 +84,7 @@ def main():
 		image = Image.open('images.jpeg')
 
 		st.image(image, caption='Sunrise by the mountains')
-		st.dataframe(df.['nama_ikan'])
+		st.dataframe(df['nama_ikan'])
 
 	elif choice == "Recommend":
 		st.subheader("Recommend Fish")

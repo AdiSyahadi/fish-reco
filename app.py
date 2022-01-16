@@ -80,12 +80,11 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		st.caption('Copy salah satu nama ikan pada kolom data lalu kemudian Pasti ke dalam kolom Recommended')
+		from PIL import Image
 		image = Image.open('images.jpeg')
-		st.image(image, caption='Mini Project Fish Recommendation')
-		
-		st.dataframe(df.head())
 
+		st.image(image, caption='Sunrise by the mountains')
+		st.dataframe(df.head(96))
 
 	elif choice == "Recommend":
 		st.subheader("Recommend Fish")

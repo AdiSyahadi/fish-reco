@@ -81,7 +81,7 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		st.caption('Copy salah satu nama ikan pada kolom data lalu kemudian Pasti ke dalam kolom Recommended')
-		image = Image.open('https://cdn.idntimes.com/content-images/community/2019/03/ikan-tuna-337d58f37de71665001b5431308e58ae_600x400.jpg')
+		image = Image.open('images.jpeg')
 		st.image(image, caption='Mini Project Fish Recommendation')
 		
 		st.dataframe(df.head())
